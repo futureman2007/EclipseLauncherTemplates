@@ -20,10 +20,10 @@ CODEPATH="/media/stephan/UbuntuSpaceOnHDD/developing/FH/Semester_8/Bachelor/Ecli
 
 #========================== END CONFIGURABLE VARIABLES
 
-PATH="$JAVA_HOME\bin;$PATH"
+PATH="$JAVA_HOME\bin:$PATH"
 
 echo "Running Eclipse $ECLIPSE_VERSION with java jdk-$JAVA_VERSION in: $JAVA_HOME"
 echo "Working dir is: $CODEPATH"
 echo "Press any key to continue."
 read
-./$ECLIPSE_HOME/eclipse -data $CODEPATH -vm $JAVA_HOME\bin\javaw -vmargs -Dfile.encoding=UTF-8 -Xms128m -Xmx3072m -XX:MaxHeapSize=768m -XX:MaxPermSize=512m
+$ECLIPSE_HOME/eclipse -data $CODEPATH -vm $JAVA_HOME/bin/java -vmargs -Dfile.encoding=UTF-8 -Xms128m -Xmx3072m -XX:MaxHeapSize=768m -XX:MaxPermSize=512m
